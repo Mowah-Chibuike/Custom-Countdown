@@ -101,6 +101,10 @@ button {
   font-family: "Nunito", sans-serif;
 }
 
+.reset {
+  background-color: red;
+}
+
 /* Countdown */
 .countdown-El {
   position: relative;
