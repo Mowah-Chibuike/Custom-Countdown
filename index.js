@@ -9,6 +9,7 @@ const resetBtn2 = document.getElementById("reset2");
 
 let countdownValue = 0;
 let countdown;
+let showMessage;
 
 const second = 1000;
 const minute = second * 60;
@@ -30,7 +31,7 @@ const updateDOM = () => {
       clearInterval(countdown);
       ul.classList.add("completed");
       localStorage.removeItem("countdown");
-      setTimeout(() => {
+      showMessage = setTimeout(() => {
         countdownEl.style.display = "none";
         complete.hidden = false;
       }, 10000);
@@ -66,6 +67,7 @@ const getCountdownValue = (event) => {
 // Reset the countdown
 const resetCountdown = () => {
   clearInterval(countdown);
+  clearTimeout(showMessage);
   localStorage.removeItem("countdown");
   ul.classList.remove("completed");
   inputContainer.hidden = false;
