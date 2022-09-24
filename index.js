@@ -26,7 +26,7 @@ const updateDOM = () => {
     const minutes = Math.floor((distance % hour) / minute);
     const seconds = Math.floor((distance % minute) / second);
 
-    if (distance < 1000) {
+    if (distance < 0) {
       clearInterval(countdown);
       ul.classList.add("completed");
       localStorage.removeItem("countdown");
