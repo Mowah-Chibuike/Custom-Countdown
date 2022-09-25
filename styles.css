@@ -130,11 +130,12 @@ li {
   text-transform: uppercase;
   display: inline-block;
   margin-inline: 15px;
+  text-align: center;
 }
 
 li span {
   display: block;
-  font-size: 200px;
+  font-size: 150px;
   text-align: center;
 }
 
